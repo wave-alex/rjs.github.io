@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>潤捷 (Run-Jie) | 全方位資訊技術解決方案</title>
+    
+    <!-- 基礎 SEO 設定 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>潤捷資訊科技 | 專業客製化程式設計、ERP與工業自動化解決方案</title>
+    
+    <!-- 網頁描述：包含核心關鍵字 -->
+    <meta name="description" content="潤捷資訊科技提供專業客製化程式設計、製造業 ERP 系統、企業 MIS 管理系統、IT 技術委外及工業自動化監控服務。致力於協助企業數位轉型，提升營運效率。">
+    <!-- 設定關鍵字 (雖然現代搜尋引擎較少直接讀取，但仍建議設定) -->
+    <meta name="keywords" content="潤捷, 客製化程式設計, 製造業ERP, AI Agent, 私有AI, 製造業ERP, 企業MIS系統, 工業自動化, IT技術委外, 軟體開發, 數位轉型, AI自動化開發">
+    
+    <!-- Canonical 設定 -->
+    <link rel="canonical" href="https://yourdomain.com/">
+
+    <!-- Open Graph (社群分享優化) -->
+    <meta property="og:title" content="潤捷資訊科技 | 全方位資訊技術解決方案">
+    <meta property="og:description" content="潤捷致力於解決企業資訊化痛點，提供一站式軟體設計與硬體維護。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <!-- 建議您放一張公司專業形象圖 -->
+    <meta property="og:image" content="https://yourdomain.com/Logo5.jpg">
+	
+	
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    },
+                    colors: {
+                        tech: {
+                            dark: '#0a0f1c',
+                            card: 'rgba(17, 24, 39, 0.7)',
+                            border: 'rgba(56, 189, 248, 0.3)',
+                            glow: '#38bdf8',
+                        }
+                    },
+                    boxShadow: {
+                        'neon': '0 0 15px rgba(56, 189, 248, 0.5)',
+                        'neon-hover': '0 0 25px rgba(56, 189, 248, 0.8)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0a0f1c;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: #f8fafc;
+        }
+        
+        /* 玻璃擬物化卡片樣式 */
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            border-color: rgba(56, 189, 248, 0.6);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+            transform: translateY(-5px);
+        }
+
+        /* 滾動動畫基底 */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 漸變文字 */
+        .text-gradient {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 裝飾性格線背景 */
+        .grid-bg {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-cyan-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-md border-b border-slate-800"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo區塊 -->
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="Logo5.jpg" alt="Run-Jie Logo" class="h-10 w-auto rounded object-contain bg-white/10 p-1" onerror="this.src='https://placehold.co/120x40/0f172a/38bdf8?text=RUN-JIE'">
+                    <span class="font-bold text-xl tracking-wider text-white hidden sm:block">潤捷資訊科技</span>
+                </div>
+                
+                <!-- 桌面版選單 -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#about" class="hover:text-cyan-400 text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">核心需求</a>
+                        <a href="#services" class="hover:text-cyan-400 text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">營業項目</a>
+                        <a href="#solutions" class="hover:text-cyan-400 text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">專業系統</a>
+                        <a href="#outsourcing" class="hover:text-cyan-400 text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">技術委外</a>
+                        <a href="#architecture" class="hover:text-cyan-400 text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">架構拓樸</a>
+                    </div>
+                </div>
+                
+                <!-- 聯絡按鈕 & 手機版選單切換 -->
+                <div class="flex items-center">
+                    <a href="#contact" class="hidden md:inline-flex items-center justify-center px-5 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-cyan-600 hover:bg-cyan-500 shadow-neon transition-all">
+                        聯絡我們
+                    </a>
+                    <div class="-mr-2 flex md:hidden">
+                        <button type="button" id="mobile-menu-btn" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 手機版選單面板 -->
+        <div class="md:hidden hidden bg-slate-900 border-b border-slate-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">核心需求</a>
+                <a href="#services" class="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">營業項目</a>
+                <a href="#solutions" class="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">專業系統</a>
+                <a href="#outsourcing" class="text-gray-300 hover:text-cyan-400 block px-3 py-2 rounded-md text-base font-medium">技術委外</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
+        <!-- 背景圖片疊加 -->
+        <div class="absolute inset-0 z-0">
+            <img src="AutoCtrl3.jpg" alt="科技背景" class="w-full h-full object-cover opacity-20 mix-blend-luminosity" onerror="this.src='https://placehold.co/1920x1080/0a0f1c/1e293b'">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-[#0a0f1c]/80 to-[#0a0f1c]"></div>
+            <div class="absolute inset-0 grid-bg opacity-30"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal active">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 mb-8 backdrop-blur-sm">
+                <i class="fas fa-microchip"></i>
+                <span class="text-sm font-medium tracking-wide">企業資訊化的核心夥伴</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight">
+                全方位資訊技術 <br class="hidden md:block" />
+                <span class="text-gradient">專業客製化程式設計</span>
+            </h1>
+           
+            <p class="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed mb-10">
+                深度整合 AI 人工智慧與軟體開發，橫跨製造業 ERP、企業 MIS、工業自動化監控與 IT 技術委外。潤捷致力於解決您在資訊化過程中面臨的人力、成本及技術痛點。
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#services" class="px-8 py-3 rounded-md bg-cyan-600 text-white font-medium hover:bg-cyan-500 hover:shadow-neon transition-all flex items-center justify-center gap-2">
+                    探索核心服務 <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#outsourcing" class="px-8 py-3 rounded-md bg-transparent border border-gray-500 text-gray-300 font-medium hover:border-cyan-400 hover:text-cyan-400 transition-all flex items-center justify-center gap-2">
+                    了解 IT 委外優勢
+                </a>
+            </div>
+        </div>
+        
+        <!-- 向下滾動提示 -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#about" class="text-gray-500 hover:text-cyan-400 transition-colors">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 relative border-t border-slate-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+					
+                <div class="reveal">
+                    <!-- 加上 scale-[1.2] 使其在原位置放大 20% -->
+<br> <br /><br> <br /><br> <br /><br> <br />
+                    <div class="relative rounded-xl overflow-hidden shadow-[0_0_30px_rgba(56,189,248,0.15)] group scale-y-[1.3] scale-x-[1.1]">
+                        <div class="absolute inset-0 bg-cyan-500/20 group-hover:bg-transparent transition-all duration-500 z-10"></div>
+                        <img src="MainStyle2.jpg" alt="資訊化需求分析" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/800x600/1e293b/475569?text=Analysis'">
+                    </div>
+                </div>
+							
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">企業資訊化面臨的挑戰</h2>
+                    <div class="w-20 h-1 bg-cyan-500 mb-8 rounded-full"></div>
+                    <p class="text-gray-400 mb-8 text-lg">潤捷精準識別出企業在數位轉型與營運過程中，最常遭遇的七大核心需求，並為此提供量身訂做的解決對策：</p>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-800/50 transition-colors border border-transparent hover:border-slate-700">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-400 border border-cyan-500/30">1</div>
+                            <span class="text-gray-300 mt-1">營運流程資訊化的轉型策略規劃</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-800/50 transition-colors border border-transparent hover:border-slate-700">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-400 border border-cyan-500/30">2</div>
+                            <span class="text-gray-300 mt-1">資訊化開發方案的專業評估與選擇</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-800/50 transition-colors border border-transparent hover:border-slate-700">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-400 border border-cyan-500/30">3</div>
+                            <span class="text-gray-300 mt-1">硬體設備與實際需求的精確匹配</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-800/50 transition-colors border border-transparent hover:border-slate-700">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-400 border border-cyan-500/30">4</div>
+                            <span class="text-gray-300 mt-1">系統設計的全面性與前瞻性規劃</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-800/50 transition-colors border border-transparent hover:border-slate-700">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-400 border border-cyan-500/30">5</div>
+                            <span class="text-gray-300 mt-1">管理系統軟體執行效能的嚴格驗證</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-800/50 transition-colors border border-transparent hover:border-slate-700">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-400 border border-cyan-500/30">6</div>
+                            <span class="text-gray-300 mt-1">軟硬體系統設備的長期保固與維護</span>
+                        </li>
+                        <li class="flex items-start gap-4 p-3 rounded-lg hover:bg-slate-800/50 transition-colors border border-transparent hover:border-slate-700">
+                            <div class="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-900/50 flex items-center justify-center text-cyan-400 border border-cyan-500/30">7</div>
+                            <span class="text-gray-300 mt-1">資訊技術委外的決策支援，解決無專才困擾</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 relative bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">高度垂直整合的核心服務</h2>
+                <div class="w-20 h-1 bg-cyan-500 mx-auto rounded-full mb-6"></div>
+                <p class="text-gray-400 max-w-2xl mx-auto">從基礎架構建置到高端自動化技術，潤捷提供涵蓋軟體開發與硬體設備的一站式整合方案。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 服務一：企業資訊管理系統 -->
+                <div class="glass-card rounded-2xl p-8 reveal">
+                    <div class="w-14 h-14 bg-blue-900/50 rounded-lg flex items-center justify-center text-blue-400 text-2xl mb-6 border border-blue-500/30">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">企業資訊管理系統</h3>
+                    <ul class="space-y-3 text-gray-400 text-sm mb-6">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-cyan-500 mt-1"></i> <span><strong>製造業 ERP：</strong>以庫存(零件/半成品/成品)為中心，對接訂貨、製造與銷售，產出效益分析與報表。</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-cyan-500 mt-1"></i> <span><strong>MIS 管理系統：</strong>專案任務、廠商進銷、門市收支、營業費用及員工薪資等資料管理中心。</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-cyan-500 mt-1"></i> <span><strong>POS 進銷存：</strong>針對零售門市提供即時銷售與庫存整合。</span></li>
+                        <li class="flex items-start gap-2"> </li>
+                    </ul>
+                    <img src="AutoCtrl2.jpg" alt="ERP架構圖" class="w-full h-32 object-cover rounded mt-auto opacity-80 hover:opacity-100 transition-opacity border border-slate-700" onerror="this.src='https://placehold.co/400x200/1e293b/38bdf8?text=ERP+Structure'">
+                </div>
+
+                <!-- 服務二：硬體與基礎設施 -->
+                <div class="glass-card rounded-2xl p-8 reveal transition-delay-100">
+                    <div class="w-14 h-14 bg-cyan-900/50 rounded-lg flex items-center justify-center text-cyan-400 text-2xl mb-6 border border-cyan-500/30">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">硬體與基礎設施服務</h3>
+                    <ul class="space-y-3 text-gray-400 text-sm mb-6">
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-cyan-500 mt-1"></i> <span><strong>設備買賣維護：</strong>品牌主機代理、3C 裝置、個人電腦及週邊。</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-cyan-500 mt-1"></i> <span><strong>伺服器建置：</strong>Windows Server 與 Linux 網路伺服器建置與維護。</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-cyan-500 mt-1"></i> <span><strong>資料庫開發：</strong>MSSQL, MYSQL, Oracle, Postgre 建置設計。</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-cyan-500 mt-1"></i> <span><strong>網路服務：</strong>企業網路規劃與軟硬體維護合約。</span></li>
+                    </ul>
+                    <img src="Hardware.jpg" alt="MIS流程圖" class="w-full h-32 object-cover rounded mt-auto opacity-80 hover:opacity-100 transition-opacity border border-slate-700" onerror="this.src='https://placehold.co/400x200/1e293b/38bdf8?text=Infrastructure'">
+                </div>
+
+                <!-- 服務三：高端技術開發 -->
+                <div class="glass-card rounded-2xl p-8 reveal transition-delay-200">
+                    <div class="w-14 h-14 bg-indigo-900/50 rounded-lg flex items-center justify-center text-indigo-400 text-2xl mb-6 border border-indigo-500/30">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-white">高端技術開發與自動化</h3>
+                    <ul class="space-y-3 text-gray-400 text-sm mb-6">                       
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-cyan-500 mt-1"></i> <span><strong>工業自動化：</strong>工廠自動化與機電整合控制系統規劃。</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-cyan-500 mt-1"></i> <span><strong>機電配線：</strong>PLC程式設計以及機電控制箱配線。</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-cyan-500 mt-1"></i> <span><strong>環境監控：</strong>汙水處理監控、BMS 電池管理、物聯網 (IoT)。</span></li>
+                        <li class="flex items-start gap-2"><i class="fas fa-check text-cyan-500 mt-1"></i> <span><strong>前瞻技術：</strong>影像語音辨識系統、AI Agent 人工智慧設計。</span></li>
+                    </ul>
+                    <img src="AutoCtrl.jpg" alt="高端技術開發與自動化" class="w-full h-32 object-cover rounded mt-auto opacity-80 hover:opacity-100 transition-opacity border border-slate-700" onerror="this.src='https://placehold.co/400x200/1e293b/38bdf8?text=Automation+UI'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solutions" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('MainStyle3.jpg')] bg-cover bg-fixed bg-center opacity-5" onerror="this.style.backgroundImage='none'"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">專業客製化產業 資訊程式 軟體管理系統設計</h2>
+                    <div class="w-20 h-1 bg-cyan-500 rounded-full mb-4"></div>
+                    <p class="text-gray-400 max-w-xl">針對特定產業特性，量身開發高度適配的管理介面，讓操作更直觀、管理更高效。</p>其它軟體如 : 證劵買賣管理系統, 鷹架驗算分析管理, 美髮業管理系統, 遊藝店代幣系統 ...
+                </div>
+                <div class="mt-6 md:mt-0">
+                    
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- ERP 系統 -->
+                <div class="group relative rounded-xl overflow-hidden reveal border border-slate-700 bg-slate-800/80 p-6 flex flex-col sm:flex-row gap-6 hover:border-cyan-500/50 transition-colors">
+
+                    <div class="w-full sm:w-2/5 flex-shrink-0">
+                        <img src="ZJ_PIC.jpg" alt="ERP 製造業管理系統" class="w-full h-full object-cover rounded shadow-md border border-slate-600" onerror="this.src='https://placehold.co/300x400/0f172a/38bdf8?text=Hotel+UI'">
+                    </div>
+
+                    <div class="w-full sm:w-3/5 flex flex-col justify-center">
+                        <div class="text-cyan-400 mb-2"><i class="fas fa-hotel text-2xl"></i></div>
+                        <h4 class="text-xl font-bold text-white mb-3">ERP 製造業管理系統</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">潤捷電控提供專業製造業 ERP 系統規劃設計與建置服務，協助企業整合生產排程、進銷存、財務與管理流程，建立穩定、高效率的資訊系統</p>
+                    </div>
+                </div>
+
+                <!-- MIS 系統 -->
+                <div class="group relative rounded-xl overflow-hidden reveal border border-slate-700 bg-slate-800/80 p-6 flex flex-col sm:flex-row gap-6 hover:border-cyan-500/50 transition-colors">
+
+                    <div class="w-full sm:w-2/5 flex-shrink-0">
+                        <img src="RJC_MIS.jpg" alt="MIS 企業資訊管理系統" class="w-full h-full object-cover rounded shadow-md border border-slate-600" onerror="this.src='https://placehold.co/300x400/0f172a/38bdf8?text=Hotel+UI'">
+                    </div>
+
+                    <div class="w-full sm:w-3/5 flex flex-col justify-center">
+                        <div class="text-cyan-400 mb-2"><i class="fas fa-hotel text-2xl"></i></div>
+                        <h4 class="text-xl font-bold text-white mb-3">MIS 企業資訊管理系統</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">一個以人為導向，利用電腦硬體、軟體和網路裝置的資訊技術，對人員和業務流程，進行一系列的資訊收集存儲和數據處理、傳遞、加工、整理的系統，生成決策者於日常決策的資訊。</p>
+                    </div>
+                </div>
+				
+                <!-- 旅館系統 -->
+                <div class="group relative rounded-xl overflow-hidden reveal border border-slate-700 bg-slate-800/80 p-6 flex flex-col sm:flex-row gap-6 hover:border-cyan-500/50 transition-colors">
+                    <div class="w-full sm:w-2/5 flex-shrink-0">
+                        <img src="Motel.png" alt="旅館住宿管理系統" class="w-full h-full object-cover rounded shadow-md border border-slate-600" onerror="this.src='https://placehold.co/300x400/0f172a/38bdf8?text=Hotel+UI'">
+                    </div>
+
+                    <div class="w-full sm:w-3/5 flex flex-col justify-center">
+                        <div class="text-cyan-400 mb-2"><i class="fas fa-hotel text-2xl"></i></div>
+                        <h4 class="text-xl font-bold text-white mb-3">旅館住宿管理系統</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">提供直觀的房號狀態顯示（如二大床、一小床規格與房價），具備進房、退房、換房、清掃、預約訂房、黑名單防範及旅客資料完整管理功能。</p>
+                    </div>
+                </div>
+
+                <!-- 寺廟系統 -->
+                <div class="group relative rounded-xl overflow-hidden reveal border border-slate-700 bg-slate-800/80 p-6 flex flex-col sm:flex-row gap-6 hover:border-cyan-500/50 transition-colors">
+                    <div class="w-full sm:w-2/5 flex-shrink-0">
+                        <img src="Temple.jpg" alt="寺廟管理系統" class="w-full h-full object-cover rounded shadow-md border border-slate-600" onerror="this.src='https://placehold.co/300x400/0f172a/38bdf8?text=Hotel+UI'">
+                    </div>
+                    <div class="w-full sm:w-3/5 flex flex-col justify-center">
+                        <div class="text-cyan-400 mb-2"><i class="fas fa-yin-yang text-2xl"></i></div>
+                        <h4 class="text-xl font-bold text-white mb-3">寺廟管理系統</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">高度整合會計帳務、信眾資料庫、委員管理與法會安排，更具備前衛的光明燈與太歲燈「視覺化無線管理」技術。</p>
+                    </div>
+                </div>
+				
+                <!-- 便民服務系統 -->
+                <div class="group relative rounded-xl overflow-hidden reveal border border-slate-700 bg-slate-800/80 p-6 flex flex-col sm:flex-row gap-6 hover:border-cyan-500/50 transition-colors">
+                    <div class="w-full sm:w-2/5 flex-shrink-0">
+                        <img src="Victor2.jpg" alt="選民服務系統" class="w-full h-full object-cover rounded shadow-md border border-slate-600" onerror="this.src='https://placehold.co/300x400/0f172a/38bdf8?text=Hotel+UI'">
+                    </div>
+                    <div class="w-full sm:w-3/5 flex flex-col justify-center">
+                        <div class="text-cyan-400 mb-2"><i class="fas fa-university text-2xl"></i></div>
+                        <h4 class="text-xl font-bold text-white mb-3">選民服務系統</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">專為選民或大型組織設計，模組包含：收發文管理、新聞資料收發、行程記事、請託案件追蹤及預算精準管理。</p>
+                    </div>
+                </div>
+
+                <!-- 自動監控系統 -->
+                <div class="group relative rounded-xl overflow-hidden reveal border border-slate-700 bg-slate-800/80 p-6 flex flex-col sm:flex-row gap-6 hover:border-cyan-500/50 transition-colors">
+                    <div class="w-full sm:w-2/5 flex-shrink-0">
+                        <img src="WaterCtl.jpg" alt="汙水監控系統" class="w-full h-full object-cover rounded shadow-md border border-slate-600" onerror="this.src='https://placehold.co/300x400/0f172a/38bdf8?text=Hotel+UI'">
+                    </div>
+                    <div class="w-full sm:w-3/5 flex flex-col justify-center">
+                        <div class="text-cyan-400 mb-2"><i class="fas fa-thermometer-half text-2xl"></i></div>
+                        <h4 class="text-xl font-bold text-white mb-3">汙水監控系統</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">具備即時環境參數監測（溫度/光控/PH值/導電度）、連動設備狀態控制（風扇/冷氣/水牆幫浦），並支援歷史資料長效查詢分析。</p>
+                    </div>
+                </div>
+
+                <!-- 液晶螢幕自動判片系統 -->
+                <div class="group relative rounded-xl overflow-hidden reveal border border-slate-700 bg-slate-800/80 p-6 flex flex-col sm:flex-row gap-6 hover:border-cyan-500/50 transition-colors">
+                    <div class="w-full sm:w-2/5 flex-shrink-0">
+                        <img src="TempCtl.jpg" alt="溫室環控系統" class="w-full h-full object-cover rounded shadow-md border border-slate-600" onerror="this.src='https://placehold.co/300x400/0f172a/38bdf8?text=Hotel+UI'">
+                    </div>
+                    <div class="w-full sm:w-3/5 flex flex-col justify-center">
+                        <div class="text-cyan-400 mb-2"><i class="fas fa-thermometer-half text-2xl"></i></div>
+                        <h4 class="text-xl font-bold text-white mb-3">溫室環控系統</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">具備即時環境參數監測（室內外溫度/光控/水牆散熱/風速）、連動設備狀態控制（風扇/冷氣/水牆幫浦），並支援歷史資料長效查詢分析。</p>
+                    </div>
+                </div>
+
+                <!-- 液晶螢幕自動判片系統 -->	
+                <div class="group relative rounded-xl overflow-hidden reveal border border-slate-700 bg-slate-800/80 p-6 flex flex-col sm:flex-row gap-6 hover:border-cyan-500/50 transition-colors">
+                    <div class="w-full sm:w-2/5 flex-shrink-0">
+                        <img src="LCD_Lane.jpg" alt="液晶螢幕自動判片系統" class="w-full h-full object-cover rounded shadow-md border border-slate-600" onerror="this.src='https://placehold.co/300x400/0f172a/38bdf8?text=Hotel+UI'">
+                    </div>
+
+                    <div class="w-full sm:w-3/5 flex flex-col justify-center">
+                        <div class="text-cyan-400 mb-2"><i class="fas fa-hotel text-2xl"></i></div>
+                        <h4 class="text-xl font-bold text-white mb-3">液晶螢幕自動判片系統</h4>
+                        <p class="text-sm text-gray-400 leading-relaxed">提供液晶螢幕即時 EQ Status, CIM Mode, Process Count, Recipe ID, 以及 Graph analysis 狀態 。</p>
+                    </div>
+                </div>				
+				
+            </div>
+        </div>
+    </section>
+
+<section id="ai-solutions" class="py-24 bg-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="reveal text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">企業級 AI 應用與私有化建置</h2>
+            <div class="w-20 h-1 bg-cyan-500 mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="glass-card p-8 rounded-2xl reveal">
+                <h3 class="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+                    <i class="fas fa-shield-alt text-cyan-400"></i> 私有 AI 應用架構 (On-Premise AI)
+                </h3>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    針對極度重視數據隱私的產業，潤捷協助企業建置私有化 AI 環境。
+                </p>		
+                <ul class="space-y-3 text-gray-300">
+                    <li>• <strong>數據不落地：</strong>資料完全保存在企業內部，無需傳輸至公有雲。</li>
+                    <li>• <strong>專屬知識庫：</strong>基於企業歷史文件、營運數據模型調校(Fine-tuning)。</li>
+                    <li>• <strong>客製化權限：</strong>精確控管 AI 模型的使用權限與存取深度。</li>
+                </ul><br><br />
+				<div style="display: flex; justify-content: center;">				
+                <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-800 p-2" style="display: inline-block;"><!-- 模擬拓樸動畫 -->
+<img style="width:330px;height:514px;border-radius: 4%;" src="AI-Premise.png">
+                </div></div>					
+            </div>
+            
+            <div class="glass-card p-8 rounded-2xl reveal">
+                <h3 class="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+                    <i class="fas fa-robot text-cyan-400"></i> AI Agent 流程自動化
+                </h3>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    我們開發的 AI Agent 不僅能生成文字，更具備「執行能力」：
+                </p>
+                <ul class="space-y-3 text-gray-300">
+                    <li>• <strong>自動化任務流：</strong>自動解析郵件、填寫 ERP 表單、觸發供應鏈提醒。</li>
+                    <li>• <strong>跨系統串接：</strong>透過 API 串接您的舊有 MIS 系統與現代化 AI 運算引擎。</li>
+                    <li>• <strong>智能輔助決策：</strong>即時分析生產良率、庫存預警，並主動提出改善建議。</li>
+                </ul><br><br />
+				<div style="display: flex; justify-content: center;">
+                <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-800 p-2" style="display: inline-block; "><!-- 模擬拓樸動畫 -->
+<img style="width:330px;height:514px;border-radius: 4%;" src="AI-Agent.png">
+                </div>
+				</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="outsourcing" class="py-24 relative bg-cyan-900/10 border-y border-cyan-900/30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1 reveal]">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">IT 技術委外的核心價值</h2>
+                    <div class="w-20 h-1 bg-cyan-500 mb-8 rounded-full"></div>
+                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                        針對缺乏專才或擔心人員流動率高的企業，潤捷提供即時、高效率的遠端與現地維護方案，成為您最堅強的 IT 後盾。
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4 p-5 glass-card rounded-xl">
+                            <div class="mt-1 w-12 h-12 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0 border border-cyan-500/50">
+                                <i class="fas fa-hand-holding-usd text-cyan-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">降低營運成本</h4>
+                                <p class="text-gray-400 text-sm">透過專業且系統化的維護，大幅提升資訊設備使用的妥善率，減少不必要的設備汰換與隱形成本。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4 p-5 glass-card rounded-xl">
+                            <div class="mt-1 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center flex-shrink-0 border border-blue-500/50">
+                                <i class="fas fa-crosshairs text-blue-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">專注企業本業</h4>
+                                <p class="text-gray-400 text-sm">讓企業主與核心團隊無須再處理繁瑣、耗時的 IT 技術問題，全心專注於企業經營與市場開拓。</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4 p-5 glass-card rounded-xl">
+                            <div class="mt-1 w-12 h-12 rounded-full bg-indigo-500/20 flex items-center justify-center flex-shrink-0 border border-indigo-500/50">
+                                <i class="fas fa-bolt text-indigo-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white mb-2">即時應變與救援</h4>
+                                <p class="text-gray-400 text-sm">提供即時性的遠端連線除錯與現地維護服務，以最高效率排除故障，確保企業營運不中斷。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="order-1 lg:order-2 reveal">
+<br> <br /> <br> <br /> <br> <br />	<br> <br />			
+                    <div class="relative rounded-2xl overflow-hidden p-2 border border-slate-700 bg-slate-800 scale-y-[1.2]" >
+                        <img src="MainStyle3.jpg" alt="IT技術委外" class="w-full h-auto rounded-xl shadow-2xl" onerror="this.src='https://placehold.co/800x600/0f172a/38bdf8?text=IT+Support'">
+                        
+                        <!-- 裝飾浮動元素 -->
+                        <div class="absolute top-10 -left-6 bg-slate-800 border border-cyan-500/50 p-4 rounded-lg shadow-neon flex items-center gap-3 animate-pulse">
+                            <i class="fas fa-shield-alt text-cyan-400 text-2xl"></i>
+                            <div>
+                                <div class="text-xs text-gray-400">系統狀態</div>
+                                <div class="font-bold text-white">安全防護中</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">網頁設計與網絡拓樸技術</h2>
+                <div class="w-20 h-1 bg-cyan-500 mx-auto rounded-full mb-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- RWD 說明 -->
+                <div class="glass-card rounded-2xl p-8 reveal">
+                    <h3 class="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+                        <i class="fas fa-mobile-alt text-cyan-400"></i> 自適應網頁設計 (RWD)
+                    </h3>
+                    <p class="text-gray-400 mb-6">潤捷的網頁開發流程強烈強調跨平台相容性，確保完美的使用者體驗：</p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <div class="w-2 h-2 rounded-full bg-cyan-500"></div>
+                            <strong>多設備解析度支援：</strong>手機 (320px+)、平板 (800px+)、桌機 (1024px+)。
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-300">
+                            <div class="w-2 h-2 rounded-full bg-cyan-500"></div>
+                            <strong>自適應解譯機制：</strong>透過主機處理 HTML 語碼，確保各終端正確呈現。
+                        </li>
+                    </ul>
+                    
+                    <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-800 p-2">
+                         <img src="RWD_HTML.jpg" alt="RWD架構" class="w-full h-auto object-cover rounded" onerror="this.src='https://placehold.co/600x300/0f172a/38bdf8?text=Responsive+Design'">
+                    </div>
+                </div>
+
+                <!-- 網路安全說明 -->
+                <div class="glass-card rounded-2xl p-8 reveal transition-delay-100">
+                    <h3 class="text-2xl font-bold mb-6 text-white flex items-center gap-3">
+                        <i class="fas fa-network-wired text-cyan-400"></i> 網路安全與拓樸規劃
+                    </h3>
+                    <p class="text-gray-400 mb-6">在網路架構規劃上，潤捷採用多層次的防護與連結模式，打造堅不可摧的企業內網：</p>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start gap-3 text-sm text-gray-300">
+                            <div class="w-2 h-2 rounded-full bg-blue-500 mt-1.5 flex-shrink-0"></div>
+                            <div>
+                                <strong class="block text-white mb-1">私人內部工作群組：</strong>
+                                透過企業級網路路由器與終端讀取群組（如網路印表機、手寫板、員工電腦）進行高效率的安全串接。
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-3 text-sm text-gray-300">
+                            <div class="w-2 h-2 rounded-full bg-blue-500 mt-1.5 flex-shrink-0"></div>
+                            <div>
+                                <strong class="block text-white mb-1">硬體級防火牆部署：</strong>
+                                在網頁伺服器主機與搜尋引擎主機前端，均配置嚴密的實體與軟體防火牆，杜絕外部惡意存取，確保資料絕對安全。
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="mt-auto flex justify-center py-6">
+                        <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-800 p-2"><!-- 模擬拓樸動畫 -->
+<img style="width:64;height:64;border-radius: 4%;" src="FireWall2.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-slate-950 border-t border-slate-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <!-- 品牌資訊 -->
+                <div class="col-span-1 md:col-span-1">
+                    <img src="Logo5.jpg" alt="Run-Jie Logo" class="h-12 w-auto rounded object-contain bg-white/10 p-1 mb-6" onerror="this.src='https://placehold.co/150x50/0f172a/38bdf8?text=RUN-JIE'">
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        潤捷透過整合軟體開發能力、硬體維護專業與深厚的工業自動化背景，為企業提供一站式的資訊化服務。是企業在尋求 IT 委外與技術升級時的高效能夥伴。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-slate-700 transition-all"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-slate-700 transition-all"><i class="fab fa-line"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-slate-700 transition-all"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <!-- 快速連結 -->
+                <div class="col-span-1">
+                    <h4 class="text-white font-bold text-lg mb-6 border-b border-slate-800 pb-2">解決方案</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#services" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> 企業資訊管理系統 (ERP/MIS)</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> 硬體與伺服器建置</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> 工業自動化與環境監控</a></li>
+                        <li><a href="#solutions" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> 旅館/寺廟/便民 專業系統</a></li>
+                        <li><a href="#outsourcing" class="text-gray-400 hover:text-cyan-400 text-sm transition-colors flex items-center gap-2"><i class="fas fa-angle-right text-xs"></i> 企業 IT 技術委外維護</a></li>
+                    </ul>
+                </div>
+
+                <!-- 聯絡資訊 -->
+                <div class="col-span-1">
+                    <h4 class="text-white font-bold text-lg mb-6 border-b border-slate-800 pb-2">聯絡潤捷</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-cyan-500 mt-1 w-5 text-center"></i>
+                            <span class="text-gray-400 text-sm">企業營運總部<br>歡迎致電預約技術顧問諮詢</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-phone-alt text-cyan-500 w-5 text-center"></i>
+                            <span class="text-gray-400 text-sm">Line ID : 0987560860 或 alex_tw</span>
+                        </li>
+                        <li class="flex items-center gap-4">
+                            <i class="fas fa-envelope-open-text text-cyan-500 w-5 text-center"></i>
+                            <span class="text-gray-400 text-sm">chayiwave@outlook.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 mt-8 text-center flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2026 潤捷 Run-Jie 資訊技術解決方案. All rights reserved.
+                </p>
+                <div class="mt-4 md:mt-0 text-sm text-gray-500 space-x-4">
+                    <a href="#" class="hover:text-cyan-400 transition-colors">隱私權政策</a>
+                    <span>|</span>
+                    <a href="#" class="hover:text-cyan-400 transition-colors">服務條款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 手機版選單切換
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // 點擊手機版連結後自動收合選單
+            const mobileLinks = menu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                });
+            });
+
+            // Navbar 滾動效果 (變更背景透明度與陰影)
+            const navbar = document.getElementById('navbar');
+            const navBg = navbar.querySelector('.absolute');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navBg.classList.add('bg-slate-900/95', 'shadow-lg');
+                    navBg.classList.remove('bg-slate-900/80');
+                } else {
+                    navBg.classList.add('bg-slate-900/80');
+                    navBg.classList.remove('bg-slate-900/95', 'shadow-lg');
+                }
+            });
+
+            // 滾動觸發動畫 (Intersection Observer)
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // 動畫觸發後可選擇取消觀察以提升效能，或保留以重複觸發
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
